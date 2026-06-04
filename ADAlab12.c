@@ -19,11 +19,9 @@ void solveNQueen(int board[], int row, int n){
 
             if (row == n){
                 solutionCount++;
-
                 printf("Solution %d:\n", solutionCount);
                 for (int i = 1; i <= n; i++)
                     printf("Queen %d -> Column %d\n", i, board[i]);
-
                 printf("\n");
             }
             else
