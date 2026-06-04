@@ -23,15 +23,15 @@ int main() {
         for (int j = i + 1; j < n; j++) {
             if (ratio[i] < ratio[j]) {
                 float temp;
-
+                // swap ratio
                 temp = ratio[i];
                 ratio[i] = ratio[j];
                 ratio[j] = temp;
-
+                // swap weight
                 temp = w[i];
                 w[i] = w[j];
                 w[j] = temp;
-
+                // swap profit
                 temp = p[i];
                 p[i] = p[j];
                 p[j] = temp;
