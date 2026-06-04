@@ -2,11 +2,12 @@
 #include <stdio.h>
 
 int set[20], subsetArr[20];
-int n, sum;
-int found = 0;
+int n, sum;// sum= Target sum
+int found = 0;// Flag to check whether a subset is found
 
-void subset(int i, int curr, int size)
-{
+// Backtracking function
+void subset(int i, int curr, int size) // size=number of elements currently included in the subset.
+{                                     //curr = currentSum
     if (curr == sum)
     {
         found = 1;
@@ -17,7 +18,7 @@ void subset(int i, int curr, int size)
         return;
     }
 
-    if (i == n || curr > sum)
+    if (i == n || curr > sum) // Stop if all elements are processed or current sum exceeds target sum
         return;
 
     // Include current element
