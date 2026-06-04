@@ -4,26 +4,20 @@
 
 int solutionCount = 0;
 
-int isSafe(int board[], int row, int col)
-{
-    for (int i = 1; i < row; i++)
-    {
+int isSafe(int board[], int row, int col){
+    for (int i = 1; i < row; i++){
         if (board[i] == col || abs(board[i] - col) == abs(i - row))
             return 0;
     }
     return 1;
 }
 
-void solveNQueen(int board[], int row, int n)
-{
-    for (int col = 1; col <= n; col++)
-    {
-        if (isSafe(board, row, col))
-        {
+void solveNQueen(int board[], int row, int n){
+    for (int col = 1; col <= n; col++){
+        if (isSafe(board, row, col)){
             board[row] = col;
 
-            if (row == n)
-            {
+            if (row == n){
                 solutionCount++;
 
                 printf("Solution %d:\n", solutionCount);
@@ -40,8 +34,7 @@ void solveNQueen(int board[], int row, int n)
     }
 }
 
-int main()
-{
+int main(){
     int n;
     int board[20];
 
