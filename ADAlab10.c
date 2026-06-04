@@ -18,7 +18,7 @@ int main() {
     printf("Enter capacity: ");
     scanf("%f", &W);
 
-    /* Sort items by decreasing profit/weight ratio */
+    /* Sort items by decreasing profit/weight ratio (bubble sort) */
     for (int i = 0; i < n - 1; i++) {
         for (int j = i + 1; j < n; j++) {
             if (ratio[i] < ratio[j]) {
