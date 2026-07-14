@@ -1,3 +1,4 @@
+//Prim's Algorithm
 #include <stdio.h>
 
 #define INF 9999
