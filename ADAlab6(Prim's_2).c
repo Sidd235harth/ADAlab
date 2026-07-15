@@ -28,7 +28,7 @@ int main() {
 
     printf("\nEdges in MST:\n");
 
-    for (int count = 0; count < n - 1; count++) {
+    for (int k = 0; k < n - 1; k++) {
         min = INF;
 
         for (i = 0; i < n; i++) {
