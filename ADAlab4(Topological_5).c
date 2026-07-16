@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 int main() {
-    int n, a[20][20], indeg[20] = {0};
+    int n, a[20][20], indeg[20] = {0};  //indeg = The in-degree of a vertex is the "number of incoming edges to that vertex".
     int i, j;
 
     printf("Enter number of vertices: ");
