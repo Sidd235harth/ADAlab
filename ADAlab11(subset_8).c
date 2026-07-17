@@ -43,7 +43,7 @@ int main()
 
     subset(0, 0, 0);
 
-    if (!found)
+    if (found == 0)
         printf("No subset found with the given sum\n");
 
     return 0;
