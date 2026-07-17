@@ -46,7 +46,7 @@ int main() {
         }
 
         // Cycle detection
-        if (!found) {
+        if (found == 0) {
             printf("\nGraph has a cycle! Topological sort not possible.\n");
             return 0;
         }
