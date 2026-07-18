@@ -43,7 +43,7 @@ int main() {
     printf("Enter number of Elements: ");
     scanf("%d", &n);
 
-    int *a = (int *)malloc(n * sizeof(int));
+    int a[n];
 
     srand(time(NULL));
 
@@ -54,9 +54,7 @@ int main() {
     printArray(a, n);
 
     clock_t s = clock();
-
     mergesort(a, 0, n - 1);
-
     clock_t e = clock();
 
     printf("\nArray after sorting:\n");
@@ -65,6 +63,5 @@ int main() {
     printf("\nTime = %lf seconds\n",
            (double)(e - s) / CLOCKS_PER_SEC);
 
-    free(a);
     return 0;
 }
