@@ -29,19 +29,22 @@ int main(){
 	int n;
 	printf("Enter the number of element");
 	scanf("%d",&n);
-	int *a=malloc(n*sizeof(int));
+	int a[n];
 	srand(time(NULL));
+	
 	for(int i=0;i<n;i++)
 		a[i]=rand()%1000;
+	
 	printf("\n Array before sorting:\n");
 	printArray(a,n);
+	
 	clock_t start=clock();
 	quick(a,0,n-1);
 	clock_t end=clock();
+	
 	printf("\n Array after sorting:\n");
 	printArray(a,n);
 	printf("\n time=%fseconds\n",(double )(end-start)/CLOCKS_PER_SEC) ;
-	free(a);
 	return 0;
 }
 
