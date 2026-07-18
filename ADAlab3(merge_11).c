@@ -5,7 +5,7 @@
 
 void merge(int a[], int l, int m, int r) {
     int i = l, j = m + 1, k = 0;
-    int *t = (int *)malloc((r - l + 1) * sizeof(int));
+    int t[10000];
 
     while (i <= m && j <= r)
         t[k++] = (a[i] < a[j]) ? a[i++] : a[j++];
@@ -19,7 +19,7 @@ void merge(int a[], int l, int m, int r) {
     for (i = l, k = 0; i <= r; i++, k++)
         a[i] = t[k];
 
-    free(t);
+    
 }
 
 void mergesort(int a[], int l, int r) {
