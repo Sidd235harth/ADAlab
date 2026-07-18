@@ -3,9 +3,9 @@
 #include <stdlib.h>
 #include <time.h>
 
-void merge(int a[], int l, int m, int r) {
-    int i = l, j = m + 1, k = 0;
-    int t[10000];
+void merge(int a[], int l, int m, int r) {       // i → left half pointer
+    int i = l, j = m + 1, k = 0;                 // j → right half pointe
+    int t[10000];                                // k → temporary array pointer
 
     while (i <= m && j <= r)
         t[k++] = (a[i] < a[j]) ? a[i++] : a[j++];
